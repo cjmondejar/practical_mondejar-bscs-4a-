@@ -23,7 +23,7 @@ def predict():
     user_input = np.array(user_input).reshape(1, -1)
     prediction = model.predict(user_input)
     print(prediction)
-    result = 'Diabetic' if prediction == 1 else 'Not Diabetic'
+    result = 'Diabetic' if prediction == 0 else 'Not Diabetic'
 
     return render_template('index.html', prediction_output=f'Person is {result}')
 
